@@ -1,0 +1,116 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #f4f7f6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+      flex-shrink: 0;
+    }
+    .sidebar h2 {
+      color: #007acc;
+      margin-bottom: 30px;
+    }
+    .sidebar button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #e5f1fb;
+      border: none;
+      border-radius: 6px;
+      color: #333;
+      text-align: left;
+      cursor: pointer;
+    }
+    .sidebar button.active {
+      background-color: #3ca4e8;
+      color: white;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .header .user {
+      display: flex;
+      align-items: center;
+    }
+    .header .user img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+    }
+    .cards {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .card {
+      background-color: #ecf8ff;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 200px;
+    }
+    .card.highlight {
+      background-color: #3ca4e8;
+      color: white;
+    }
+    .section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 300px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .box table {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .box table td {
+      padding: 8px 0;
+    }
+    .box .status {
+      color: #3ca4e8;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+      .cards, .section {
+        flex-direction: column;
+      }
+    }
+  
