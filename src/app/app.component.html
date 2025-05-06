@@ -1,64 +1,58 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistema de Gestión</title>
-</head>
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <h2>Sistema de Gestión</h2>
-      <button class="active">Dashboard</button>
-      <button>Propiedad</button>
-      <button>Propietarios</button>
-      <button>Agregar Propiedad</button>
-      <button>Mantenimiento</button>
-      <button>Persoaln</button>
-    </div>
-    <div class="main">
-      <div class="header">
-        <div>🌐 Español</div>
-        <div class="user">
-          <span>Gaspar<br/>TID: 23445</span>
-          <img src="https://via.placeholder.com/40" alt="Avatar" />
-        </div>
-      </div>
-      <h2>DASHBOARD</h2>
-      <div class="cards">
-        <div class="card highlight">
-          <strong>Propiedades Vendidas</strong><br/>45
-        </div>
-        <div class="card">
-          <strong>Total de Propiedades</strong><br/>142
-        </div>
-        <div class="card">
-          <strong>Total Ingresos</strong><br/>$56456.00
-        </div>
-        <div class="card">
-          <strong>Total de Gastos</strong><br/>$26456.00
-        </div>
-      </div>
-      <div class="section">
-        <div class="box">
-          <strong>Historial de Pagos</strong>
-          <table>
-            <tr><td>Septiembre 2024</td><td>$4568.00</td><td>Pagado</td></tr>
-            <tr><td>Octubre 2025</td><td>$4568.00</td><td>Sin Pagar</td></tr>
-            <tr><td>Noviembre 2024</td><td>$4568.00</td><td>Pagado</td></tr>
-          </table>
-          <button style="margin-top: 10px; padding: 5px 10px;">Ver todo</button>
-        </div>
-        <div class="box">
-          <strong>Estatus de mantenimiento</strong>
-          <table>
-            <tr><td>Solicitud #001</td><td class="status">En progreso</td></tr>
-            <tr><td>Solicitud #002</td><td class="status">Completado</td></tr>
-            <tr><td>Solicitud #004</td><td class="status">Pendiente</td></tr>
-          </table>
-        </div>
+<div class="container">
+  <aside class="sidebar">
+    <h2>Activos</h2>
+    <nav>
+      <a routerLink="/pages/" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/pages/propiedad" routerLinkActive="active">Propiedad</a>
+      <a routerLink="/pages/propietarios" routerLinkActive="active">Propietarios</a>
+      <a routerLink="/pages/agregar-propiedad" routerLinkActive="active">Agregar Propiedad</a>
+      <a routerLink="/pages/mantenimiento" routerLinkActive="active">Mantenimiento</a>
+      <a routerLink="/pages/personal" routerLinkActive="active">Personal</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <div class="header">
+      <div>🌐 Español</div>
+      <div class="user">
+        <span>Gaspar<br />TID: 23445</span>
+        <img src="https://via.placeholder.com/40" alt="Avatar" />
       </div>
     </div>
+    <h2>DASHBOARD</h2>
+    <div class="cards">
+      <div class="card highlight">
+        <strong>Propiedades Vendidas</strong><br/>45
+      </div>
+      <div class="card">
+        <strong>Total de Propiedades</strong><br/>142
+      </div>
+      <div class="card">
+        <strong>Total Ingresos</strong><br/>$56456.00
+      </div>
+      <div class="card">
+        <strong>Total de Gastos</strong><br/>$26456.00
+      </div>
+    </div>
+    <div class="section">
+      <div class="box">
+        <strong>Historial de Pagos</strong>
+        <table>
+          <tr><td>Septiembre 2024</td><td>$4568.00</td><td>Pagado</td></tr>
+          <tr><td>Octubre 2025</td><td>$4568.00</td><td>Sin Pagar</td></tr>
+          <tr><td>Noviembre 2024</td><td>$4568.00</td><td>Pagado</td></tr>
+        </table>
+        <button style="margin-top: 10px; padding: 5px 10px;">Ver todo</button>
+      </div>
+      <div class="box">
+        <strong>Estatus de mantenimiento</strong>
+        <table>
+          <tr><td>Solicitud #001</td><td class="status">En progreso</td></tr>
+          <tr><td>Solicitud #002</td><td class="status">Completado</td></tr>
+          <tr><td>Solicitud #004</td><td class="status">Pendiente</td></tr>
+        </table>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
   </div>
-</body>
-</html>
+</div>
